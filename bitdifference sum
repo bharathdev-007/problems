@@ -1,0 +1,9 @@
+class Solution:
+    def cntBits(self, A):
+        # write your method here
+        sum=0
+        for i in range(len(A)):
+            for j in range(len(A)):
+                x=str(bin(A[i]^A[j]))
+                sum+=x.count("1")
+        return sum
